@@ -1,3 +1,39 @@
+
+1.Скопировать заданную строку в другую строку.
+```
+#include <iostream>
+#include <string.h> 
+using namespace::std;
+
+int main(){
+    cout << "Введите первую строку: ";
+    string textFirts; cin >> textFirts;
+    cout << "Введите вторую строку: ";
+    string textSecond; cin >> textSecond;
+    textFirts.insert(textFirts.size(),textSecond);
+    cout << "Итог:  " <<  textFirts; 
+}
+```
+
+
+
+
+
+
+
+3.Изменить регистр букв во всей строке.
+```
+#include <iostream> 
+#include <algorithm> 
+#include <string> 
+using namespace::std; 
+
+int main(){ 
+ string str; cin >> str;
+ transform(str.begin(), str.end(), str.begin(), ::toupper); 
+ cout << str;
+ }
+```
 6.Осуществить сравнение двух строк:
 шаг1. Уничтожить ведущие и заключительные пробелы в обеих строках
 шаг2. Перевести обе строки в один регистр (в прописные, либо в строчные)
