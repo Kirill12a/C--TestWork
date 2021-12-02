@@ -84,8 +84,28 @@ int main() {
 }
 ```
 
-
-
+5.Подсчитать количество вхождений заданной подстроки (или отдельного символа) в строке
+```
+#include <string> 
+#include <iostream> 
+using namespace::std; 
+int main() { 
+    int counter = 0; 
+    string::size_type pos = 0; 
+    string s; 
+    cout << "Введите слово: ";
+    getline(cin, s); 
+    string target; 
+    cout << "Введите букву/слово, которую хотите проверить: ";
+    getline(cin, target); 
+    while ((pos = s.find(target, pos)) != string::npos) { 
+        ++counter; 
+        pos += target.length(); 
+    } 
+ cout << "Количество сходств: " << counter << endl; 
+ 
+}
+```
 
 6. Осуществить сравнение двух строк:
 шаг1. Уничтожить ведущие и заключительные пробелы в обеих строках
