@@ -14,6 +14,31 @@ int main(){
     cout << "Итог:  " <<  textFirts; 
 }
 ```
+
+2. Добавить заданную подстроку в начало и в конец другой строки
+```
+#include <iostream> 
+#include <algorithm> 
+#include <string> 
+#include <cstring> 
+using namespace::std; 
+ 
+int main() { 
+    cout << "Введите слово с которым будет будет соединение: " ;
+    string b; cin >> b;
+    cout << "\n" << "Подставить в начало: ";
+    string a; cin >> a; 
+    a.insert(a.size(), b); 
+    cout  << a; 
+    cout << "\n" <<"Подставить в конец ";
+    cin >> a; 
+    b.insert(b.size(), a); 
+    cout <<  b << "\n"; 
+}
+```
+
+
+
 3. Изменить регистр букв во всей строке.
 ```
 #include <iostream> 
