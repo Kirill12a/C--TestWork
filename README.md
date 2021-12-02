@@ -1,5 +1,5 @@
 
-1.Скопировать заданную строку в другую строку.
+1. Скопировать заданную строку в другую строку.
 ```
 #include <iostream>
 #include <string.h> 
@@ -14,14 +14,7 @@ int main(){
     cout << "Итог:  " <<  textFirts; 
 }
 ```
-
-
-
-
-
-
-
-3.Изменить регистр букв во всей строке.
+3. Изменить регистр букв во всей строке.
 ```
 #include <iostream> 
 #include <algorithm> 
@@ -34,7 +27,42 @@ int main(){
  cout << str;
  }
 ```
-6.Осуществить сравнение двух строк:
+
+
+4. Изменить регистр букв в части встроки.
+```
+#include <iostream> 
+#include <algorithm> 
+#include <string> 
+#include <cstring> 
+using namespace::std; 
+ 
+int main() { 
+    string str; 
+     string s; 
+  
+    getline(cin, str); 
+    int len = str.size(); 
+    char* array = new char[len]; 
+    strcpy(array, str.c_str()); 
+ for ( int i = 0; i < (str.size() + 1); i++){ 
+    int j = rand(); 
+        if (j % 2 == 0) { 
+            array[i] = toupper(array[i]); 
+        } 
+        else { 
+            array[i] = tolower(array[i]); 
+        } 
+  
+    } 
+ cout << array; 
+}
+```
+
+
+
+
+6. Осуществить сравнение двух строк:
 шаг1. Уничтожить ведущие и заключительные пробелы в обеих строках
 шаг2. Перевести обе строки в один регистр (в прописные, либо в строчные)
 шаг3. можно сравнивать эти строки
